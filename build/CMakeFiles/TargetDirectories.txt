@@ -1,0 +1,3 @@
+/home/lexlimes/bachelor/TOV_solver/build/CMakeFiles/edit_cache.dir
+/home/lexlimes/bachelor/TOV_solver/build/CMakeFiles/rebuild_cache.dir
+/home/lexlimes/bachelor/TOV_solver/build/CMakeFiles/exec.dir

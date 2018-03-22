@@ -1,0 +1,33 @@
+#=======================================
+#ANNAHME DASS P(0) UND EPS(0) AN DER 
+#OBERFLAECHE NULL SIND
+#=======================================
+#set output "tmp.dat"
+#set multiplot
+set terminal pdf
+set output 'fit.pdf'
+set print "tmp.dat"
+# FITFUNKTION
+xmin = `sort -nk 1 check_p_eps.csv | head -n 1 | awk '{print $2}'`
+ymin = `sort -nk 1 check_p_eps.csv | head -n 1 | awk '{print $3}'`
+
+
+#FINAL SET OF PARAMETERS
+
+a = xmin/sqrt(ymin)
+b = 30
+c=0.5
+
+f(x) = a*x**c + b
+set fit quiet
+
+
+#fit f(x) 'check_p_eps.csv' using 3:2 via a,b,c
+
+fit f(x) '< tail -n 100 check_p_eps.csv' using 3:2 via a
+print a,b,c,xmin,ymin
+
+set xrange [0:50]
+#p 'check_p_eps.csv', f(x)
+plot f(x) linetype 3 
+replot 'check_p_eps.csv' every 10 using 3:2 with points pointtype 2 

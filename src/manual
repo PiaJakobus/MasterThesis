@@ -1,0 +1,17 @@
+ZUR UMRECHNUNG ========================================
+
+h_quer = G = 1
+h_quer * c = 1
+
+DIE EINHEITEN DER SKYRME PARAMETRIZATION ERGEBEN BEI 
+AUSMULTIPLIZIEREN DIE ENERGIEDICHTE MIT DEN EINHEITEN
+[MeV/fm^3]. T0 UND T3 HABEN ABER UNTERSCHIEDLICHE 
+ENHEITEN!!
+
+
+ZU DEN DATEIEN:
+check_p_eps.csv PLOTTET DIE EOS (DRUCK-EPS)
+plot --> eos_plot.p
+
+tabelle_rel.csv PLOTTET RADIUS MASSE UND PRESSURE
+plot --> pressure_mass_R.p
